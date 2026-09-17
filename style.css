@@ -486,3 +486,129 @@ img { max-width: 100%; height: auto; }
   .hero h1 { font-size: 2.45rem; }
   .page-hero { padding: 3.2rem 0; }
 }
+
+
+script.js
+
+const page = window.location.pathname.split('/').pop() || 'index.html';
+
+document.querySelectorAll('.site-nav .nav-link').forEach(link => {
+  const href = link.getAttribute('href');
+  if (href === page) link.classList.add('active');
+});
+
+const progress = document.createElement('div');
+progress.className = 'reading-progress';
+document.body.appendChild(progress);
+
+window.addEventListener('scroll', () => {
+  const doc = document.documentElement;
+  const max = doc.scrollHeight - doc.clientHeight;
+  const pct = max > 0 ? (doc.scrollTop / max) * 100 : 0;
+  progress.style.width = `${pct}%`;
+});
+
+const button = document.createElement('button');
+button.id = 'btnTopo';
+button.setAttribute('aria-label', 'Voltar ao topo');
+button.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+document.body.appendChild(button);
+
+window.addEventListener('scroll', () => {
+  button.style.display = window.scrollY > 450 ? 'block' : 'none';
+});
+
+button.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', event => {
+    const id = link.getAttribute('href');
+    if (!id || id === '#') return;
+    const target = document.querySelector(id);
+    if (target) {
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+const revealElements = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealElements.forEach(el => {
+    el.classList.add('reveal-ready');
+    observer.observe(el);
+  });
+} else {
+  // Fallback: em navegadores sem IntersectionObserver, o conteúdo permanece visível.
+  revealElements.forEach(el => el.classList.add('visible'));
+}
+
+const year = document.getElementById('ano');
+if (year) year.textContent = new Date().getFullYear();
+
+
+hero-hm-rm.svg
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" role="img" aria-labelledby="title desc">
+  <title id="title">História da Matemática conectada ao Raciocínio Matemático</title>
+  <desc id="desc">Ilustração com papiro, pirâmide, símbolos matemáticos e trilha de raciocínio.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff3d6"/><stop offset="1" stop-color="#e8c77a"/></linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dcefed"/><stop offset="1" stop-color="#7ab4ae"/></linearGradient>
+  </defs>
+  <rect x="20" y="30" width="720" height="500" rx="40" fill="#fffdf8" stroke="#1f2a44" stroke-opacity=".08"/>
+  <circle cx="616" cy="112" r="62" fill="#f2c66d" opacity=".55"/>
+  <path d="M490 390 L610 190 L730 390 Z" fill="#d79b2f" opacity=".8"/>
+  <path d="M520 390 L610 240 L700 390 Z" fill="#f0c46c"/>
+  <rect x="96" y="112" width="350" height="310" rx="22" fill="url(#paper)" stroke="#8f6a28" stroke-width="3"/>
+  <path d="M115 158 C180 130 250 172 330 142 S410 150 425 136" fill="none" stroke="#8f6a28" stroke-width="4" opacity=".55"/>
+  <path d="M125 210 H410 M125 250 H355 M125 290 H390" stroke="#8f6a28" stroke-width="4" opacity=".45" stroke-linecap="round"/>
+  <g transform="translate(145 320)">
+    <rect width="240" height="72" rx="18" fill="#1f2a44"/>
+    <text x="22" y="31" font-family="Arial" font-size="16" fill="#fff">observar → conjecturar</text>
+    <text x="22" y="55" font-family="Arial" font-size="16" fill="#f2c66d">generalizar → justificar</text>
+  </g>
+  <g fill="url(#teal)" stroke="#2f7a77" stroke-width="2">
+    <circle cx="500" cy="105" r="34"/><circle cx="545" cy="150" r="28"/><circle cx="494" cy="178" r="24"/>
+  </g>
+  <g font-family="Georgia" font-weight="700" fill="#1f2a44">
+    <text x="488" y="116" font-size="28">×</text><text x="535" y="160" font-size="24">∑</text><text x="486" y="187" font-size="20">?</text>
+  </g>
+  <path d="M424 448 C500 490 590 495 680 450" fill="none" stroke="#2f7a77" stroke-width="10" stroke-linecap="round" opacity=".75"/>
+  <circle cx="436" cy="451" r="12" fill="#d79b2f"/><circle cx="678" cy="449" r="12" fill="#1f2a44"/>
+  <text x="500" y="492" font-family="Arial" font-size="18" fill="#1f2a44">História → investigação → raciocínio</text>
+</svg>
+
+
+hm-rm-conexao.svg
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t d">
+  <title id="t">Conexão entre História da Matemática e Raciocínio Matemático</title><desc id="d">Fluxo de um episódio histórico para uma tarefa investigativa e para processos de raciocínio.</desc>
+  <rect width="760" height="300" rx="28" fill="#fffdf8"/>
+  <g font-family="Arial" text-anchor="middle">
+    <rect x="30" y="85" width="190" height="130" rx="24" fill="#faedcf" stroke="#d79b2f" stroke-width="3"/>
+    <text x="125" y="130" font-size="20" font-weight="700" fill="#1f2a44">Episódio histórico</text>
+    <text x="125" y="162" font-size="15" fill="#1f2a44">problema • prática • fonte</text>
+    <rect x="285" y="85" width="190" height="130" rx="24" fill="#e3ebf4" stroke="#315c8c" stroke-width="3"/>
+    <text x="380" y="130" font-size="20" font-weight="700" fill="#1f2a44">Tarefa exploratória</text>
+    <text x="380" y="162" font-size="15" fill="#1f2a44">estratégias • discussão</text>
+    <rect x="540" y="85" width="190" height="130" rx="24" fill="#dcefed" stroke="#2f7a77" stroke-width="3"/>
+    <text x="635" y="130" font-size="20" font-weight="700" fill="#1f2a44">Raciocínio Matemático</text>
+    <text x="635" y="162" font-size="15" fill="#1f2a44">conjecturar • generalizar</text>
+    <text x="635" y="184" font-size="15" fill="#1f2a44">justificar • validar</text>
+    <text x="252" y="155" font-size="34" fill="#d79b2f">→</text>
+    <text x="507" y="155" font-size="34" fill="#2f7a77">→</text>
+  </g>
+</svg>
