@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" role="img" aria-labelledby="t d">
+  <title id="t">Papiro e dobramentos</title><desc id="d">Representação visual de um papiro com a sequência 1, 2, 4 e 8.</desc>
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#fff0c7"/><stop offset="1" stop-color="#e4c06d"/></linearGradient></defs>
+  <rect x="48" y="40" width="424" height="180" rx="22" fill="url(#g)" stroke="#9b7023" stroke-width="3"/>
+  <circle cx="48" cy="80" r="26" fill="#f6d88f" stroke="#9b7023" stroke-width="3"/><circle cx="472" cy="180" r="26" fill="#f6d88f" stroke="#9b7023" stroke-width="3"/>
+  <text x="95" y="92" font-family="Georgia" font-size="30" fill="#1f2a44">1 → 2 → 4 → 8</text>
+  <text x="95" y="136" font-family="Arial" font-size="18" fill="#6d5526">dobrar • combinar • justificar</text>
+  <path d="M95 166 H395" stroke="#9b7023" stroke-width="4" stroke-linecap="round" opacity=".45"/>
+</svg>

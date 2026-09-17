@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" role="img" aria-labelledby="t d">
+  <title id="t">Grécia e relações matemáticas</title><desc id="d">Colunas gregas e formas geométricas.</desc>
+  <rect width="520" height="260" rx="28" fill="#eef3f7"/>
+  <path d="M95 195 H425 M120 85 H400 M140 55 H380" stroke="#315c8c" stroke-width="12" stroke-linecap="round"/>
+  <g fill="#dbe5ef" stroke="#315c8c" stroke-width="4"><rect x="140" y="90" width="44" height="100" rx="6"/><rect x="238" y="90" width="44" height="100" rx="6"/><rect x="336" y="90" width="44" height="100" rx="6"/></g>
+  <circle cx="75" cy="65" r="28" fill="#f2c66d" opacity=".8"/>
+  <text x="55" y="230" font-family="Arial" font-size="17" fill="#1f2a44">comparar • argumentar • justificar</text>
+</svg>

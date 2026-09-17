@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" role="img" aria-labelledby="title desc">
+  <title id="title">História da Matemática conectada ao Raciocínio Matemático</title>
+  <desc id="desc">Ilustração com papiro, pirâmide, símbolos matemáticos e trilha de raciocínio.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff3d6"/><stop offset="1" stop-color="#e8c77a"/></linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dcefed"/><stop offset="1" stop-color="#7ab4ae"/></linearGradient>
+  </defs>
+  <rect x="20" y="30" width="720" height="500" rx="40" fill="#fffdf8" stroke="#1f2a44" stroke-opacity=".08"/>
+  <circle cx="616" cy="112" r="62" fill="#f2c66d" opacity=".55"/>
+  <path d="M490 390 L610 190 L730 390 Z" fill="#d79b2f" opacity=".8"/>
+  <path d="M520 390 L610 240 L700 390 Z" fill="#f0c46c"/>
+  <rect x="96" y="112" width="350" height="310" rx="22" fill="url(#paper)" stroke="#8f6a28" stroke-width="3"/>
+  <path d="M115 158 C180 130 250 172 330 142 S410 150 425 136" fill="none" stroke="#8f6a28" stroke-width="4" opacity=".55"/>
+  <path d="M125 210 H410 M125 250 H355 M125 290 H390" stroke="#8f6a28" stroke-width="4" opacity=".45" stroke-linecap="round"/>
+  <g transform="translate(145 320)">
+    <rect width="240" height="72" rx="18" fill="#1f2a44"/>
+    <text x="22" y="31" font-family="Arial" font-size="16" fill="#fff">observar → conjecturar</text>
+    <text x="22" y="55" font-family="Arial" font-size="16" fill="#f2c66d">generalizar → justificar</text>
+  </g>
+  <g fill="url(#teal)" stroke="#2f7a77" stroke-width="2">
+    <circle cx="500" cy="105" r="34"/><circle cx="545" cy="150" r="28"/><circle cx="494" cy="178" r="24"/>
+  </g>
+  <g font-family="Georgia" font-weight="700" fill="#1f2a44">
+    <text x="488" y="116" font-size="28">×</text><text x="535" y="160" font-size="24">∑</text><text x="486" y="187" font-size="20">?</text>
+  </g>
+  <path d="M424 448 C500 490 590 495 680 450" fill="none" stroke="#2f7a77" stroke-width="10" stroke-linecap="round" opacity=".75"/>
+  <circle cx="436" cy="451" r="12" fill="#d79b2f"/><circle cx="678" cy="449" r="12" fill="#1f2a44"/>
+  <text x="500" y="492" font-family="Arial" font-size="18" fill="#1f2a44">História → investigação → raciocínio</text>
+</svg>

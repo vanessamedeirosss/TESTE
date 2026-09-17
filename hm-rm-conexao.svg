@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t d">
+  <title id="t">Conexão entre História da Matemática e Raciocínio Matemático</title><desc id="d">Fluxo de um episódio histórico para uma tarefa investigativa e para processos de raciocínio.</desc>
+  <rect width="760" height="300" rx="28" fill="#fffdf8"/>
+  <g font-family="Arial" text-anchor="middle">
+    <rect x="30" y="85" width="190" height="130" rx="24" fill="#faedcf" stroke="#d79b2f" stroke-width="3"/>
+    <text x="125" y="130" font-size="20" font-weight="700" fill="#1f2a44">Episódio histórico</text>
+    <text x="125" y="162" font-size="15" fill="#1f2a44">problema • prática • fonte</text>
+    <rect x="285" y="85" width="190" height="130" rx="24" fill="#e3ebf4" stroke="#315c8c" stroke-width="3"/>
+    <text x="380" y="130" font-size="20" font-weight="700" fill="#1f2a44">Tarefa exploratória</text>
+    <text x="380" y="162" font-size="15" fill="#1f2a44">estratégias • discussão</text>
+    <rect x="540" y="85" width="190" height="130" rx="24" fill="#dcefed" stroke="#2f7a77" stroke-width="3"/>
+    <text x="635" y="130" font-size="20" font-weight="700" fill="#1f2a44">Raciocínio Matemático</text>
+    <text x="635" y="162" font-size="15" fill="#1f2a44">conjecturar • generalizar</text>
+    <text x="635" y="184" font-size="15" fill="#1f2a44">justificar • validar</text>
+    <text x="252" y="155" font-size="34" fill="#d79b2f">→</text>
+    <text x="507" y="155" font-size="34" fill="#2f7a77">→</text>
+  </g>
+</svg>
