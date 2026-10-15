@@ -632,3 +632,12 @@ hm-rm-conexao.svg
 .task-document-link.student:hover{background:#edf6f4;border-color:var(--teal)}
 .task-document-link:focus-visible{outline:3px solid #d79b2f;outline-offset:3px}
 @media(max-width:575.98px){.task-grid-body{padding:1.25rem}.task-grid-art{height:155px}.task-symbol,.task-greek-icon{width:100px;height:100px;font-size:3.5rem}}
+ 
+/* Referências: acesso à publicação e navegação por âncoras */
+html { scroll-behavior: smooth; }
+section[id], .reference-item[id] { scroll-margin-top: 6rem; }
+.reference-access { display: inline-flex; gap: .55rem; align-items: center; font-weight: 800; font-size: .9rem; margin-top: .7rem; padding: .35rem 0; color: var(--teal); text-decoration: underline; text-underline-offset: .2rem; }
+.reference-access:hover { color: var(--ink); }
+.reference-access:focus-visible, .reference-jump a:focus-visible { outline: 3px solid #d79b2f; outline-offset: 3px; border-radius: 4px; }
+.reference-item:target { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(47,122,119,.12); }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } }
