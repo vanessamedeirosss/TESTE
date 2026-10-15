@@ -123,7 +123,19 @@ if (year) year.textContent = new Date().getFullYear();
       '<p class="a11y-status" id="a11y-status" role="status" aria-live="polite"></p>',
     '</section>'
   ].join("");
-  document.body.appendChild(widget);
+  // A ferramenta fica antes da navegação na ordem de tabulação.
+  document.body.prepend(widget);
+  const mainContent = document.querySelector("main");
+  if (mainContent) {
+    if (!mainContent.id) mainContent.id = "conteudo-principal";
+    mainContent.setAttribute("tabindex", "-1");
+    const skip = document.createElement("a");
+    skip.className = "skip-content";
+    skip.href = "#" + mainContent.id;
+    skip.textContent = "Ir para o conteúdo principal";
+    skip.addEventListener("click", () => { mainContent.focus(); });
+    document.body.prepend(skip);
+  }
 
   const $ = (id) => widget.querySelector("#" + id);
   const openButton = $("a11y-open");
