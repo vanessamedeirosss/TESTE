@@ -724,3 +724,9 @@ html[data-theme="dark"] .a11y-control:hover:not(:disabled){background:#355677;co
 html[data-theme="dark"] .a11y-control[aria-pressed="true"]{background:#a5e6dd;color:#10252a;border-color:#a5e6dd}
 html[data-theme="dark"] :is(.a11y-hint,.a11y-status){color:#d2e1f6}
 
+
+/* Acesso rápido por teclado ao conteúdo principal. */
+.skip-content{position:fixed;left:1rem;top:-100px;z-index:2500;background:#fff;color:#10273d;border:3px solid #b27716;border-radius:12px;padding:.65rem 1rem;font-weight:800}
+.skip-content:focus{top:.7rem;color:#10273d}
+main:focus{outline:none}
+
