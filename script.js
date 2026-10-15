@@ -78,7 +78,8 @@ if (year) year.textContent = new Date().getFullYear();
   root.style.fontSize = font + "%";
   root.dataset.theme = dark ? "dark" : "light";
 
-  const widget = document.createElement("div");
+  // Reutiliza o botão inserido diretamente no HTML para evitar que desapareça quando há atraso no JS.
+  const widget = document.getElementById("a11y-widget") || document.createElement("div");
   widget.className = "a11y-widget";
   widget.innerHTML = [
     '<button class="a11y-toggle" type="button" id="a11y-open" aria-expanded="false" aria-controls="a11y-panel" aria-label="Abrir ferramentas de acessibilidade">',
