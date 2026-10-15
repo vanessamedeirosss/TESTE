@@ -30,17 +30,8 @@ button.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', event => {
-    const id = link.getAttribute('href');
-    if (!id || id === '#') return;
-    const target = document.querySelector(id);
-    if (target) {
-      event.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
+// As âncoras são tratadas pelo navegador para preservar a URL, o histórico
+// e os links diretos às referências. A rolagem suave é definida no CSS.
 
 const revealElements = document.querySelectorAll('.reveal');
 
