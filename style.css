@@ -604,3 +604,16 @@ html[data-theme="dark"] :is(.a11y-hint,.a11y-status){color:#d2e1f6}
 .skip-content:focus{top:.7rem;color:#10273d}
 main:focus{outline:none}
 
+
+
+/* Referências inteiras são clicáveis quando existe acesso verificado. */
+.reference-clickable{padding:0;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.reference-full-link{display:block;padding:1rem 1.2rem;color:var(--ink);text-decoration:none;overflow-wrap:anywhere}
+.reference-full-link:hover{color:var(--ink);background:rgba(47,122,119,.075)}
+.reference-full-link:focus-visible{outline:3px solid #b6811d;outline-offset:-3px;border-radius:12px}
+.reference-link-meta{display:flex;gap:.5rem;align-items:center;margin-top:.75rem;color:var(--teal);font-weight:800;font-size:.88rem}
+.reference-no-file{display:block;margin-top:.7rem;font-size:.82rem;color:var(--ink-2);font-style:italic}
+html[data-theme="dark"] .reference-full-link{color:var(--ink)}
+html[data-theme="dark"] .reference-full-link:hover{color:var(--ink);background:rgba(134,221,210,.11)}
+html[data-theme="dark"] .reference-link-meta{color:#a0f5e9}
+
